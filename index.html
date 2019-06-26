@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<title>58</title>
+</head>
+<body class="bg-light">
+
+	<style type="text/css">
+		.col-12 {
+			cursor: pointer;
+		}
+	</style>
+
+	<div class="start text-center border p-3 bg-white container rounded col-4 mt-5">
+		<h2 class="text-info">Викторина по чему то</h2>
+		<p class="text-danger">Если ошибешься,то страница будет перезагружена!</p>
+		<button class="btn btn-info startBtn">НАЧАТЬ</button>
+	</div>
+
+	<div class="p-2 bg-info text-white mb-3 topName" style="display: none"><h3>Викторина по чему то</h3></div>
+
+	<div class="container v1" style="display: none">
+		<h1 class="mt-5 mb-4">CSS и HTML это языки разметки?</h1>
+
+		<div class="col-12 border p-3 bg-white no1">Только CSS является языком разметки</div>
+		<div class="col-12 border p-3 bg-white no2">Только HTML является языком разметки</div>
+		<div class="col-12 border p-3 bg-white yes">Обе являются языками разметки</div>
+	</div>
+
+	<div class="container v2" style="display: none;">
+		<h1 class="mt-5 mb-4">Какой из этих вариантов правильный</h1>
+
+		<div class="col-12 border p-3 bg-white no1_2">&lt;p stule="color; red;">Hello&lt;/p&gt;</div>
+		<div class="col-12 border p-3 bg-white yes2">&lt;p style="color: red">Hello&lt;/p&gt;</div>
+		<div class="col-12 border p-3 bg-white no2_2">&lt;p style="color: red">Hello&lt;p&gt;</div>
+	</div>
+
+	<div class="container v3" style="display: none;">
+		<h1 class="mt-5 mb-4">Какой правильно пишется и.ф чувака с высунутым языком</h1>
+
+		<div class="col-12 border p-3 bg-white no1_3">Альберт Эйнйштейн</div>
+		<div class="col-12 border p-3 bg-white no2_3">Альберт Эйштейн</div>
+		<div class="col-12 border p-3 bg-white yes4">Альберт Эйнштейн</div>
+	</div>
+
+	<div class="container v4" style="display: none;">
+		<h1 class="mt-5 mb-4">Альберт Эйнштейн он......</h1>
+
+		<div class="col-12 border p-3 bg-white yes5">физик-теоретик</div>
+		<div class="col-12 border p-3 bg-white no2_4">физик-химист</div>
+		<div class="col-12 border p-3 bg-white no1_4">мемы делает</div>
+	</div>
+
+	<div class="container v5 text-center" style="display: none;">
+		<img src="one_punch_man.jpg" class="w-50">
+		<h1 class="mt-5 mb-4">onepunchman это....</h1>
+
+		<div class="col-12 border p-3 bg-white no1_5">манга, аниме, ранобэ</div>
+		<div class="col-12 border p-3 bg-white no2_5">ранобэ, аниме</div>
+		<div class="col-12 border p-3 bg-white yes6">манга, аниме</div>
+	</div>
+
+	<div class="container v6" style="display: none;">
+		<h1 class="mt-5 mb-4">Откуда это?</h1>
+			<audio controls>
+			    <source src="jojo-guardian-angel.mp3" type="audio/mpeg">
+			    Тег audio не поддерживается вашим браузером. 
+			    <a href="audio/music.mp3">Скачайте музыку</a>.
+			</audio>
+
+		<div class="col-12 border p-3 bg-white no2_6">Наруто</div>
+		<div class="col-12 border p-3 bg-white yes7">Джо Джо</div>
+		<div class="col-12 border p-3 bg-white no1_6">Ван пис</div>
+	</div>
+
+	<div class="container v7" style="display: none;">
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/aJRu5ltxXjc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		
+		<h1 class="mt-5 mb-4">Откуда это?</h1>
+
+		<div class="col-12 border p-3 bg-white yes8">Наруто</div>
+		<div class="col-12 border p-3 bg-white no1_7">Блич</div>
+		<div class="col-12 border p-3 bg-white no2_7">Одаренный</div>
+	</div>
+
+	<script type="text/javascript">
+
+		// СООБЩЕНИЕ
+
+		document.querySelector(".startBtn").onclick = function() {
+			document.querySelector(".start").style.display = "none";
+			document.querySelector(".topName").style.display = "block";
+			document.querySelector(".v1").style.display = "block";
+		}
+
+		// 1 вопрос
+		document.querySelector(".no1").onclick = function() {
+			alert("Неправильно! Как можно не знать?");
+			location.reload();
+		}
+		document.querySelector(".no2").onclick = function() {
+			alert("Купи ручку за 50 рублей и получишь 2 ручки за который сможешь купить одну штуку за 25 рублей! (Неправильно!)");
+			location.reload();
+		}
+		document.querySelector(".yes").onclick = function() {
+			alert("Правильно!");
+			document.querySelector(".v1").style.display = "none";
+			document.querySelector(".v2").style.display = "block";
+		}
+
+		// 2 вопрос
+
+		document.querySelector(".no1_2").onclick = function() {
+			alert("Неправильно! Как можно не знать?");
+			location.reload();
+		}
+		document.querySelector(".no2_2").onclick = function() {
+			alert("Купи ручку за 50 рублей и получишь 2 ручки за который сможешь купить одну штуку за 25 рублей! (Неправильно!)");
+			location.reload();
+		}
+		document.querySelector(".yes2").onclick = function() {
+			alert("Правильно!");
+			document.querySelector(".v2").style.display = "none";
+			document.querySelector(".v3").style.display = "block";
+		}
+
+		// 3 вопрос
+
+		document.querySelector(".no1_3").onclick = function() {
+			alert("Неправильно! Как можно не знать?");
+			location.reload();
+		}
+		document.querySelector(".no2_3").onclick = function() {
+			alert("Купи ручку за 50 рублей и получишь 2 ручки за который сможешь купить одну штуку за 25 рублей! (Неправильно!)");
+			location.reload();
+		}
+		document.querySelector(".yes4").onclick = function() {
+			alert("Правильно!");
+			document.querySelector(".v3").style.display = "none";
+			document.querySelector(".v4").style.display = "block";
+		}
+
+		// 4 вопрос
+
+		document.querySelector(".no2_4").onclick = function() {
+			alert("Неправильно! Как можно не знать?");
+			location.reload();
+		}
+		document.querySelector(".no1_4").onclick = function() {
+			alert("Купи ручку за 50 рублей и получишь 2 ручки за который сможешь купить одну штуку за 25 рублей! (Неправильно!)");
+			location.reload();
+		}
+		document.querySelector(".yes5").onclick = function() {
+			alert("Правильно!");
+			document.querySelector(".v4").style.display = "none";
+			document.querySelector(".v5").style.display = "block";
+		}
+
+		// 5 вопрос
+
+		document.querySelector(".no2_5").onclick = function() {
+			alert("Неправильно! Как можно не знать?");
+			location.reload();
+		}
+		document.querySelector(".no1_5").onclick = function() {
+			alert("Купи ручку за 50 рублей и получишь 2 ручки за который сможешь купить одну штуку за 25 рублей! (Неправильно!)");
+			location.reload();
+		}
+		document.querySelector(".yes6").onclick = function() {
+			alert("Правильно!");
+			document.querySelector(".v5").style.display = "none";
+			document.querySelector(".v6").style.display = "block";
+		}
+
+		// 6 вопрос
+
+		document.querySelector(".no1_6").onclick = function() {
+			alert("Неправильно! Как можно не знать?");
+			location.reload();
+		}
+		document.querySelector(".no2_6").onclick = function() {
+			alert("Купи ручку за 50 рублей и получишь 2 ручки за который сможешь купить одну штуку за 25 рублей! (Неправильно!)");
+			location.reload();
+		}
+		document.querySelector(".yes7").onclick = function() {
+			alert("Правильно!");
+			document.querySelector(".v6").style.display = "none";
+			document.querySelector(".v7").style.display = "block";
+		}
+
+		// 7 вопрос
+
+		document.querySelector(".no2_7").onclick = function() {
+			alert("Неправильно! Как можно не знать?");
+			location.reload();
+		}
+		document.querySelector(".no1_7").onclick = function() {
+			alert("Купи ручку за 50 рублей и получишь 2 ручки за который сможешь купить одну штуку за 25 рублей! (Неправильно!)");
+			location.reload();
+		}
+		document.querySelector(".yes8").onclick = function() {
+			alert("Правильно! (Страница будет перезагружена)");
+			location.reload();
+		}
+	</script>
+</body>
+</html>
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
